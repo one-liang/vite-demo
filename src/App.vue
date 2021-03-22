@@ -1,13 +1,17 @@
 <template>
-  <img class="mx-auto" alt="Vue logo" src="./assets/logo.png" />
-  <HelloWorld msg="Hello Vue 3 + Vite" />
+  <div class="space-x-2 mb-4">
+    <router-link to="/" class="px-2 py-1">Home</router-link>
+    <router-link to="/guide" class="px-2 py-1">Guide</router-link>
+  </div>
+  <router-view v-slot="{ Component }">
+    <transition name="fade" mode="out-in">
+      <component :is="Component"></component>
+    </transition>
+  </router-view>
 </template>
 
 <script setup>
-import HelloWorld from './components/HelloWorld.vue'
-
-// This starter template is using Vue 3 experimental <script setup> SFCs
-// Check out https://github.com/vuejs/rfcs/blob/script-setup-2/active-rfcs/0000-script-setup.md
+import HelloWorld from "./components/HelloWorld.vue";
 </script>
 
 <style>
@@ -18,5 +22,20 @@ import HelloWorld from './components/HelloWorld.vue'
   text-align: center;
   color: #2c3e50;
   margin-top: 60px;
+}
+
+a:hover,
+a.router-link-active {
+  @apply border-b-2 border-indigo-500;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  @apply opacity-0;
+}
+
+.fade-enter-active,
+.fade-leave-active {
+  @apply transition-opacity duration-200 ease-in-out;
 }
 </style>
