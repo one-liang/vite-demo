@@ -1,15 +1,19 @@
 <template>
-  <div class="bg-gray-200">
-    <h1>Guide</h1>
+  <div class="h-screen py-4 bg-gray-50">
+    <h1 class="mb-8 text-3xl font-black text-center">Guide</h1>
+
+    <Suspense>
+      <template #default>
+        <Card />
+      </template>
+      <template #fallback>
+        <CardSkeleton />
+      </template>
+    </Suspense>
   </div>
 </template>
 
-<script>
-export default {
-  
-}
+<script setup>
+import Card from "./Card.vue";
+import CardSkeleton from "./CardSkeleton.vue";
 </script>
-
-<style lang="">
-  
-</style>
