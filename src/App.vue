@@ -2,7 +2,9 @@
   <div class="mb-4 space-x-2 text-center">
     <router-link to="/" class="px-2 py-1">Home</router-link>
     <router-link to="/guide" class="px-2 py-1">Guide</router-link>
-    <router-link to="/Drop" class="px-2 py-1">Drop</router-link>
+    <router-link to="/drop" class="px-2 py-1">Drop</router-link>
+    <router-link to="/fblogin" class="px-2 py-1">FBLogin</router-link>
+    <router-link to="/infinitescroll" class="px-2 py-1">InfiniteScroll</router-link>
   </div>
   <router-view v-slot="{ Component }">
     <transition name="fade" mode="out-in">
