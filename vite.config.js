@@ -12,5 +12,14 @@ export default defineConfig({
         assetFileNames: `assets/[name].[ext]`
       }
     }
+  },
+  server: {
+    proxy: {
+      '/api': {
+        target: 'https://data.ntpc.gov.tw/api/',
+        changeOrigin: true,
+        rewrite: path => path.replace(/^\/api/, '')
+      }
+    }
   }
 })
