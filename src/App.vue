@@ -5,6 +5,7 @@
     <router-link to="/drop" class="px-2 py-1">Drop</router-link>
     <router-link to="/fblogin" class="px-2 py-1">FBLogin</router-link>
     <router-link to="/infinitescroll" class="px-2 py-1">InfiniteScroll</router-link>
+    <router-link to="/axiosdemo" class="px-2 py-1">AxiosDemo</router-link>
   </div>
   <router-view v-slot="{ Component }">
     <transition name="fade" mode="out-in">

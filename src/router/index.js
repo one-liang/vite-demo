@@ -4,6 +4,7 @@ import Guide from '../components/Guide.vue';
 import Drop from '../components/Drop.vue';
 import FBLogin from '../components/FBLogin.vue';
 import InfiniteScroll from '../components/InfiniteScroll.vue';
+import AxiosDemo from '../components/AxiosDemo.vue';
 
 const router = createRouter({
   history: createWebHistory(),
@@ -27,6 +28,10 @@ const router = createRouter({
     {
       path: '/infinitescroll',
       component: InfiniteScroll,
+    },
+    {
+      path: '/axiosdemo',
+      component: AxiosDemo,
     },
   ]
 })
