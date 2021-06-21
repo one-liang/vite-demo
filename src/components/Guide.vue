@@ -12,8 +12,3 @@
     </Suspense>
   </div>
 </template>
-
-<script setup>
-import Card from "./Card.vue";
-import CardSkeleton from "./CardSkeleton.vue";
-</script>
