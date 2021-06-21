@@ -8,6 +8,7 @@
   },
   "dependencies": {
     "axios": "^0.21.1",
+    "gsap": "^3.7.0",
     "vue": "^3.0.5",
     "vue-router": "^4.0.5"
   },
